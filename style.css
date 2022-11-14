@@ -1,0 +1,146 @@
+body {
+    font-size: 16px;
+    background-color: #E7F1FB;
+    border-width: 0px;
+    padding: 0px;
+    outline-width: 0px;
+    margin: 0px;
+}
+h2 {
+    text-decoration: underline indianred;
+}
+table, th, td {
+    border-collapse: collapse;
+text-align: right;
+    margin: 0 auto; 
+}
+#wst {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#opis {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: left;
+    width: 80%;
+}
+#form {
+    margin: 0, auto;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+#form table {
+    border: 1px solid black;
+    font-weight: bold;
+}
+#form th {
+    border: 1px solid black;
+text-align: center;
+}
+#form td {
+    border: 1px solid black;
+text-align: center;
+}
+#form label {
+    text-shadow: 1px 1px 2px black;
+}
+#pmandatow {
+    width: 100%;
+    height: 700px;
+    text-align: center;
+}
+#pmandatow table {
+    width: 90%;
+    height: 80px;
+}
+#legend div{
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px grey;
+}
+#barw {
+    height: 1rem; 
+    width: 0.75rem;
+}
+#wynik {
+    width: 100%;
+}
+#wynik table {
+    border: 1px solid black;
+    margin-bottom: 1%;
+}
+#wynik th {
+    border: 1px solid black;
+    text-align: center;
+}
+#wynik td {
+    border: 1px solid black;
+}
+#wynik tr:hover {
+    background-color: DarkSeaGreen;
+    font-weight: 900;
+}
+#wynik td:hover {
+    font-size: 17px;
+    background-color: #396039;
+}    
+td.mand {
+    text-align: center;
+}
+td[colspan]:not([colspan="1"]){
+    text-align: center;
+}
+#tyttabokr {
+    text-align: center;
+}
+#tabokr {
+    margin-top: 5px;
+}
+#mandsejm{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    vertical-align: middle; 
+    overflow: hidden; 
+}
+#mandsejmchart{
+    width: 100%;
+    height: 100%;
+    transform: rotateX(180deg);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+button {
+    font-weight: bold;
+    padding: 5px 32px;
+    border-radius: 12px;
+}
+button:hover {
+    background-color: hsla(0, 100%, 50%, 0.1);
+    transition: 0.5s;
+    font-size: 18px;
+}
+#alert {
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 90px;
+}
+#info {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #f44336;
+    border: 2px solid black;
+}
