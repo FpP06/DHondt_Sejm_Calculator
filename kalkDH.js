@@ -672,7 +672,7 @@ function usun() {
     document.getElementById("alert").innerHTML = "";
     for(let p of komitety) {
         document.getElementById(p.charAt(0)+p).innerHTML = "";
-        document.getElementById(p).value = 0;
+        document.getElementById(p).value = "";
     }
 }
 
@@ -736,6 +736,11 @@ function wyswietl() {
     wynik += "</tbody></tr></tfoot></table></div>";
     document.getElementById("MN").innerHTML = 1;
     document.getElementById("wynik").innerHTML = podzial_mandatow(mandaty_calosc) + wynik;
+}
+
+function del_space(input){
+  if(/^\s/.test(input.value))
+    input.value = '';
 }
 
 function show() {
