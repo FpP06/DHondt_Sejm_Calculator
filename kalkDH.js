@@ -759,6 +759,6 @@ function show() {
     }
     else {
         document.getElementById("wynik").innerHTML = "";
-        document.getElementById("alert").innerHTML = "<div id='info'><strong>Proszę wprowadzać liczby.</strong></div>";
+        document.getElementById("alert").innerHTML = "<div id='info'><strong>Wypełnij pola liczbami.</strong></div>";
     }
 }
