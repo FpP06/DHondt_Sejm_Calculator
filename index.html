@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Kalkulator na podstawie podanych wyników sondażowych oblicza ilość mandatów ugrupowań biorących udział w wyborach do Sejmu.">
-	<title>Kalkulator - Metoda D'Hondta</title>
+    <meta name="description" content="Kalkulator na podstawie podanych wyników sondażowych oblicza ilość mandatów ugrupowań biorących udział w wyborach do Sejmu.">
+    <title>Kalkulator D'Hondta - Oblicz podział mandatów poselskich</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="kalkDH.js"></script>
 </head>
 <body>
     <div id="wst">
-        <h1>Kalkulator mandatów w wyborach parlamentarnych do Sejmu - Metoda D'Hondta</h1>
+        <h1>Kalkulator mandatów w wyborach parlamentarnych - Metoda D'Hondta</h1>
         <div id="opis">
-            <p>Kalkulator wykorzystując metodę <a href="https://pl.wikipedia.org/wiki/Metoda_D%E2%80%99Hondta" target="_blank">D'Hondta</a> pozwala obliczyć szacowaną ilość mandatów dla poszczególnych partii w wyborach parlamentarnych do Sejmu oraz przedstawić dane ze wszystkich okręgów wyborczych.</p>
-            <p>W obliczeniach brane są pod uwagę nie tylko podane w formularzu wyniki, lecz także poparcie, jakie w poszczególnych okręgach zdobyły partie uczestniczące w wyborach do Sejmu w <a href="https://sejmsenat2019.pkw.gov.pl/sejmsenat2019/pl/wyniki/sejm/pl" target="_blank">2019 roku</a>. Większe poparcie w danym okręgu z wyborów do Sejmu w 2019 roku zwiększa prawdopodobieństwo uzyskania większej ilości mandatów. Jeśli chodzi o powstałą po wyborach parlamentarnych partię Polska 2050 to założono, że głosy rozłożyły się równomiernie w każdym z 41 okręgów wyborczych. Oprócz tego przyjęto, że Mniejszość Niemiecka tak samo jak w 2019 roku uzyska 1 mandat w woj. opolskim.</p>
+            <p>Kalkulator wykorzystując metodę D'Hondta pozwala obliczyć prawdopodobną ilość mandatów poszczególnych partii startujących w wyborach parlamentarnych do Sejmu.</p>
+            <p>W obliczeniach brane są pod uwagę nie tylko podane w formularzu wyniki, lecz także poparcie, jakie w poszczególnych okręgach zdobyły partie uczestniczące w wyborach do Sejmu w 2019 roku. Większe poparcie w danym okręgu z wyborów do Sejmu w 2019 roku zwiększa prawdopodobieństwo uzyskania większej ilości mandatów w przyszłych wyborach. W przypadku partii Polska 2050 to założono, że głosy rozłożyły się równomiernie w każdym z 41 okręgów wyborczych. Oprócz tego przyjęto, że Mniejszość Niemiecka tak samo jak w 2019 roku uzyska 1 mandat w woj. opolskim.</p>
             <p>Liczba mandatów przypadających na dany okręg wyborczy jest taka sama jak w wyborach w 2019 roku. Mandatów nie uzyskują partie, które nie przekroczyły progu wyborczego (5%, dla partii koalicyjnych: 8%).</p>
+	    <p>Linki:</p>
+	    <ul style="list-style-type:square">
+	 	<li><a href="https://pl.wikipedia.org/wiki/Metoda_D%E2%80%99Hondta" target="_blank">Metoda D'Hondta</a></li>
+		<li><a href="https://sejmsenat2019.pkw.gov.pl/sejmsenat2019/pl/wyniki/sejm/pl" target="_blank">Wyniki wyborów 2019 do Sejmu RP</a></li>
+	    </ul>
         </div>
     </div>
     <div id="form">
@@ -31,32 +36,32 @@
                 <tbody>
                     <tr>
                         <td style="color:white; background-color:#41709E"><label for="PiS">PiS:</label></td>
-                        <td><input type="number" step="0.01" min="0" max="100" value="0" id="PiS" pattern="[0-9]" required/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="PiS" pattern="[0-9]" required/></td>
                         <td id="PPiS"></td>
                     </tr>
                     <tr>
                         <td style="color:white; background-color:#E46701"><label for="KO"><b>KO:</b></label></td>
-                        <td><input type="number" step="0.01" min="0" max="100" value="0" id="KO" pattern="[0-9]" required/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="KO" pattern="[0-9]" required/></td>
                         <td id="KKO"></td>
                     </tr>
                     <tr>
                         <td style="color:white; background-color:#E4A80A"><label for="PL2050">Polska 2050:</label></td>
-                        <td><input type="number" step="0.01" min="0" max="100" value="0" id="PL2050" pattern="[0-9]" required/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="PL2050" pattern="[0-9]" required/></td>
                         <td id="PPL2050"></td>
                     </tr>
                     <tr>
                         <td style="color: white; background-image: linear-gradient(to bottom right, purple, red);"><label for="Lewica">Lewica:</label></td>
-                        <td><input type="number" step="0.01" min="0" max="100" value="0" id="Lewica" pattern="[0-9]" required/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="Lewica" pattern="[0-9]" required/></td>
                         <td id="LLewica"></td>
                     </tr>
                     <tr>
                         <td style="color:white; background-color:#3DA63D"><label for="PSL">PSL:</label></td>
-                        <td><input type="number" step="0.01" min="0" max="100" value="0" id="PSL" pattern="[0-9]{4}" required/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="PSL" pattern="[0-9]{4}" required/></td>
                         <td id="PPSL"></td>
                     </tr>
                     <tr>
                         <td style="color:white; background-color:#28344C"><label for="Konfederacja">Konfederacja:</label></td>
-                        <td><input type="number" step="0.01" min="0" max="100" value="0" id="Konfederacja" pattern="[0-9]" required/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="Konfederacja" pattern="[0-9]" required/></td>
                         <td id="KKonfederacja"></td>
                     </tr>
                     <tr>
