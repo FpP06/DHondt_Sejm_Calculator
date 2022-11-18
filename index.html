@@ -8,6 +8,13 @@
     <title>Kalkulator D'Hondta - Oblicz podział mandatów poselskich</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="kalkDH.js"></script>
+    <script>
+	    function nospaces(t){
+		if(t.value.match(/\s/g)){
+		   t.value=t.value.replace(/\s/g,'');
+		}
+	   }
+   </script>
 </head>
 <body>
     <div id="wst">
@@ -32,12 +39,12 @@
                 <tbody>
                     <tr>
                         <td style="color:white; background-color:#41709E"><label for="PiS">PiS:</label></td>
-                        <td><input type="number" step="0.01" min="0" max="100" id="PiS" pattern="[0-9]" equired/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="PiS" pattern="[0-9]" onkeyup="nospaces(this)" required/></td>
                         <td id="PPiS"></td>
                     </tr>
                     <tr>
                         <td style="color:white; background-color:#E46701"><label for="KO"><b>KO:</b></label></td>
-                        <td><input type="text" step="0.01" min="0" max="100" id="KO" pattern="[0-9]" onkeydown="if(['Space'].includes(arguments[0].code)){return false;} required/></td>
+                        <td><input type="number" step="0.01" min="0" max="100" id="KO" pattern="[0-9]" onkeyup="nospaces(this)" required/></td>
                         <td id="KKO"></td>
                     </tr>
                     <tr>
