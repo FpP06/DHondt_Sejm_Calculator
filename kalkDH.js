@@ -738,11 +738,6 @@ function wyswietl() {
     document.getElementById("wynik").innerHTML = podzial_mandatow(mandaty_calosc) + wynik;
 }
 
-function del_space(input){
-  if(/^\s/.test(input.value))
-    input.value = '';
-}
-
 function show() {
     let suma_popar = 0;
     let x = [];
