@@ -672,7 +672,7 @@ function usun() {
     document.getElementById("alert").innerHTML = "";
     for(let p of komitety) {
         document.getElementById(p.charAt(0)+p).innerHTML = "";
-        document.getElementById(p).value = "";
+        document.getElementById(p).value = 0;
     }
 }
 
