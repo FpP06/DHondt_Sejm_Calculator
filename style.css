@@ -127,7 +127,7 @@ button {
 }
 button:hover {
     background-color: hsla(0, 100%, 50%, 0.1);
-    transition: 0.5s;
+    transition: 0.2s;
     font-size: 18px;
 }
 #alert {
@@ -139,7 +139,7 @@ button:hover {
     height: 90px;
 }
 #info {
-    font-size: 18px;
+    font-size: 100%;
     padding: 5%;
     background-color: #a32722;
     border-radius: 25px;
