@@ -135,7 +135,8 @@ button:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 40%
+    width: 30%;
+    height: 30%;
 }
 #info {
     font-weight: bold;
