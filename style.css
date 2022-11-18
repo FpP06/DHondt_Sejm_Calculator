@@ -26,6 +26,9 @@ text-align: right;
     text-align: left;
     width: 80%;
 }
+#opis p {
+    margin: 5px auto;
+}
 #form {
     margin: 0, auto;
     box-sizing: border-box;
