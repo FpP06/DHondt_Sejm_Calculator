@@ -135,12 +135,11 @@ button:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
-    height: 90px;
+    display: inline-block;
 }
 #info {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     background-color: #a32722;
     border-radius: 25px;
     border: 2px solid black;
