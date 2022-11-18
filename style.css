@@ -26,9 +26,7 @@ text-align: right;
     text-align: left;
     width: 80%;
 }
-#opis p {
-    margin: 5px auto;
-}
+
 #form {
     margin: 0, auto;
     box-sizing: border-box;
@@ -143,6 +141,7 @@ button:hover {
 #info {
     font-weight: bold;
     font-size: 20px;
-    background-color: #f44336;
+    background-color: #99140f;
+    border-radius: 25px;
     border: 2px solid black;
 }
