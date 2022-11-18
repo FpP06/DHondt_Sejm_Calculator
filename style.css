@@ -136,11 +136,12 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     width: 30%;
-    height: 30%;
+    height: 50%;
 }
 #info {
     font-weight: bold;
     font-size: 20px;
+    padding: 5%;
     background-color: #a32722;
     border-radius: 25px;
     border: 2px solid black;
