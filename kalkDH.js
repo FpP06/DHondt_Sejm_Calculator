@@ -671,7 +671,7 @@ function usun() {
     document.getElementById("MN").innerHTML = "";
     document.getElementById("alert").innerHTML = "";
     for(let p of komitety) {
-        document.getElementById(p.charAt(0)+p).innerHTML = "";
+        document.getElementById(p.charAt(0)+p).innerHTML = 0;
         document.getElementById(p).value = 0;
     }
 }
