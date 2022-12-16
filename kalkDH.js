@@ -558,6 +558,11 @@ function oblicz_mandaty(poparcie_komitetow, l_glosow_okr, l_mandatow) {
             komiety_ilosc_mandatow_w_okr[kom] = okr_mandaty.filter(k => k == kom).length;
         }
     }
+	for(let kom of komitety) {
+		if(ogolne_popar[kom] < 5.0) {
+			komiety_ilosc_mandatow_w_okr[kom] = 0;
+		}
+    }
     return komiety_ilosc_mandatow_w_okr;
 }
 
@@ -730,8 +735,8 @@ function wyswietl() {
     wynik += "<tfoot><tr class='suma'><td colspan='17'>Suma mandatów (PiS|KO|Lewica|PSL|Konfederacja|PL2050):</td>";
     for(let p of komitety) {
         let x = mandaty_calosc[p];
-            wynik += "<td class='mand'>"+x+"</td>";
-            document.getElementById(p.charAt(0)+p).innerHTML = x;
+        wynik += "<td class='mand'>"+x+"</td>";
+        document.getElementById(p.charAt(0)+p).innerHTML = x;
     }
     wynik += "</tbody></tr></tfoot></table></div>";
     document.getElementById("MN").innerHTML = 1;
@@ -759,6 +764,6 @@ function show() {
     }
     else {
         document.getElementById("wynik").innerHTML = "";
-        document.getElementById("alert").innerHTML = "<div id='info'><strong>Wypełnij pola liczbami.</strong></div>";
+        document.getElementById("alert").innerHTML = "<div id='info'><strong>Proszę wprowadzać liczby.</strong></div>";
     }
 }
